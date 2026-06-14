@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Напоминания</string>
+    <string name="channel_reminders_name">Напоминания</string>
+    <string name="channel_reminders_desc">Уведомления о напоминаниях</string>
+    <string name="action_snooze">Отложить на 5 минут</string>
+    <string name="action_done">Готово</string>
+    <string name="add_reminder">Добавить напоминание</string>
+    <string name="empty_title">Пока нет напоминаний</string>
+    <string name="empty_subtitle">Нажмите +, чтобы создать первое</string>
+    <string name="title_hint">Название</string>
+    <string name="note_hint">Заметка (необязательно)</string>
+    <string name="save">Сохранить</string>
+    <string name="cancel">Отмена</string>
+    <string name="delete">Удалить</string>
+    <string name="repeat_none">Без повтора</string>
+    <string name="repeat_daily">Каждый день</string>
+    <string name="repeat_weekly">Каждую неделю</string>
+    <string name="repeat_label">Повтор:</string>
+    <string name="repeat_daily_label">Каждый день</string>
+    <string name="repeat_weekly_label">Каждую неделю</string>
+    <string name="error_generic">Произошла ошибка. Попробуйте ещё раз.</string>
+</resources>

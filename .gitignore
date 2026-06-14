@@ -1,0 +1,80 @@
+# Built and generated files
+build/
+app/build/
+*/build/
+captures/
+.gradle/
+local.properties
+
+# Android Studio / IntelliJ IDEA
+*.iml
+.idea/
+.idea_modules/
+*.iws
+out/
+
+# NDK / CMake
+.externalNativeBuild/
+cmake_build/
+
+# Gradle wrapper (optional, keep if you commit the wrapper)
+# gradle/
+# gradlew
+# gradlew.bat
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+*~
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Keystore files (signing credentials)
+*.jks
+*.keystore
+*.pem
+debug.keystore
+
+# Firebase / Google Services (local overrides)
+google-services.json
+GoogleService-Info.plist
+
+# Lint reports
+lint-results.html
+lint-results.xml
+
+# ProGuard mapping files (if you store them locally)
+mapping.txt
+
+# Fabric / Crashlytics
+fabric.properties
+
+# Fastlane (only if you want to avoid certain local files)
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots
+fastlane/test_output
+
+# Android Test Orchestrator
+/test_results/
+
+# Navigation safeargs generated files
+*/generated/
+
+# Dagger / Hilt generated files
+*/generated/source/kapt/
+*/generated/source/ksp/
+
+# Jetpack Compose compiler generated files
+*/generated/compose/
+
+# Resource files from other tools
+*/src/main/res/values/ids.xml
+*/src/main/res/raw/keep.xml
+
+.kilo
+.kotlin
