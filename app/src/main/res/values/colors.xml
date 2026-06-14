@@ -1,4 +1,4 @@
 <resources>
-    <color name="primary">#1976D2</color>
-    <color name="primary_dark">#0D47A1</color>
+    <!-- Colors for launcher icons only. App theme uses Material3 color scheme defined in Color.kt -->
+    <color name="primary">#00796B</color>
 </resources>

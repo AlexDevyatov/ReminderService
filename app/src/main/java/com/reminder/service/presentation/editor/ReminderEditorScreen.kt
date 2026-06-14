@@ -118,7 +118,7 @@ fun ReminderEditorScreen(
                 modifier = Modifier
                     .fillMaxWidth()
                     .background(
-                        MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f),
+                        MaterialTheme.colorScheme.surface,
                         RoundedCornerShape(20.dp),
                     )
                     .padding(vertical = 16.dp),

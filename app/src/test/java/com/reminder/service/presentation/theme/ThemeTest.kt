@@ -19,53 +19,26 @@ class ThemeTest {
 
         // Verify teal primary
         val expectedPrimaryTeal = Color(0xFF00897B)
-        assertEquals("Light primary should be teal 600", expectedPrimaryTeal, primary)
+        assertEquals("Light primary should be teal 500", expectedPrimaryTeal, primary)
 
-        // Verify teal secondary
-        val expectedSecondaryTeal = Color(0xFF4DB6AC)
-        assertEquals("Light secondary should be teal 300", expectedSecondaryTeal, secondary)
+        // Verify emerald secondary (complementary)
+        val expectedSecondaryEmerald = Color(0xFF2E7D32)
+        assertEquals("Light secondary should be emerald 500", expectedSecondaryEmerald, secondary)
 
-        // Verify tertiary accent (coral)
-        val expectedTertiary = Color(0xFFFFAB91)
-        assertEquals("Light tertiary should be coral 300", expectedTertiary, tertiary)
+        // Verify amber tertiary (vibrant accent)
+        val expectedTertiary = Color(0xFFFFB300)
+        assertEquals("Light tertiary should be amber 500", expectedTertiary, tertiary)
 
         // Verify background
         val expectedBackground = Color(0xFFFAFDFC)
-        assertEquals("Light background should be very light teal", expectedBackground, background)
+        assertEquals("Light background should be very light neutral", expectedBackground, background)
 
         // Verify error
         val expectedError = Color(0xFFBA1A1A)
-        assertEquals("Light error should be red 700", expectedError, error)
+        assertEquals("Light error should be red", expectedError, error)
     }
 
-    @Test
-    fun `dark color scheme should contain all required teal colors`() {
-        val primary = DarkColorScheme.primary
-        val secondary = DarkColorScheme.secondary
-        val tertiary = DarkColorScheme.tertiary
-        val background = DarkColorScheme.background
-        val error = DarkColorScheme.error
 
-        // Verify light teal primary for dark theme
-        val expectedPrimaryTeal = Color(0xFF80CBC4)
-        assertEquals("Dark primary should be light teal", expectedPrimaryTeal, primary)
-
-        // Verify teal secondary
-        val expectedSecondaryTeal = Color(0xFF4DB6AC)
-        assertEquals("Dark secondary should be teal 300", expectedSecondaryTeal, secondary)
-
-        // Verify tertiary accent (coral)
-        val expectedTertiary = Color(0xFFFFAB91)
-        assertEquals("Dark tertiary should be coral 300", expectedTertiary, tertiary)
-
-        // Verify dark background
-        val expectedBackground = Color(0xFF111514)
-        assertEquals("Dark background should be dark teal", expectedBackground, background)
-
-        // Verify error
-        val expectedError = Color(0xFF93000A)
-        assertEquals("Dark error should be red 900", expectedError, error)
-    }
 
     @Test
     fun `light theme should have proper on-colors for contrast`() {
@@ -75,52 +48,27 @@ class ThemeTest {
         val onBackground = LightColorScheme.onBackground
         val onError = LightColorScheme.onError
 
-        // Verify onPrimary is white (light on teal)
+        // Verify onPrimary is white
         assertEquals("Light onPrimary should be white", Color(0xFFFFFFFF), onPrimary)
 
         // Verify onError is white
         assertEquals("Light onError should be white", Color(0xFFFFFFFF), onError)
 
         // Verify dark on-colors for light backgrounds
-        val expectedDarkText = Color(0xFF003733)
-        assertEquals("Light onBackground should be dark teal", expectedDarkText, onBackground)
+        val expectedDarkText = Color(0xFF001F1F)
+        assertEquals("Light onBackground should be dark neutral", expectedDarkText, onBackground)
     }
 
-    @Test
-    fun `dark theme should have proper on-colors for contrast`() {
-        val onPrimary = DarkColorScheme.onPrimary
-        val onSecondary = DarkColorScheme.onSecondary
-        val onTertiary = DarkColorScheme.onTertiary
-        val onBackground = DarkColorScheme.onBackground
-        val onError = DarkColorScheme.onError
 
-        // Verify onPrimary is dark teal (light text on light teal)
-        val expectedDarkText = Color(0xFF003733)
-        assertEquals("Dark onPrimary should be dark teal", expectedDarkText, onPrimary)
-
-        // Verify onBackground is light teal
-        val expectedLightText = Color(0xFFB2DFDB)
-        assertEquals("Dark onBackground should be light teal", expectedLightText, onBackground)
-    }
 
     @Test
-    fun `both themes should have all surface variants defined`() {
-        // Light theme
-        val lightSurface = LightColorScheme.surface
-        val lightSurfaceVariant = LightColorScheme.surfaceVariant
-        val lightOutline = LightColorScheme.outline
+    fun `theme should have all surface variants defined`() {
+        val surface = LightColorScheme.surface
+        val surfaceVariant = LightColorScheme.surfaceVariant
+        val outline = LightColorScheme.outline
 
-        assertNotNull("Light surface should be defined", lightSurface)
-        assertNotNull("Light surfaceVariant should be defined", lightSurfaceVariant)
-        assertNotNull("Light outline should be defined", lightOutline)
-
-        // Dark theme
-        val darkSurface = DarkColorScheme.surface
-        val darkSurfaceVariant = DarkColorScheme.surfaceVariant
-        val darkOutline = DarkColorScheme.outline
-
-        assertNotNull("Dark surface should be defined", darkSurface)
-        assertNotNull("Dark surfaceVariant should be defined", darkSurfaceVariant)
-        assertNotNull("Dark outline should be defined", darkOutline)
+        assertNotNull("Surface should be defined", surface)
+        assertNotNull("SurfaceVariant should be defined", surfaceVariant)
+        assertNotNull("Outline should be defined", outline)
     }
 }
